@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import javax.inject.Inject;
 
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 inUsername.setText(sharedPreferences.getString("username", "default"));
                // inUsername.setText(sharedPreferences.getString("username", "default"));
                 inNumber.setText(sharedPreferences.getString("number", "12345"));
+                Toast.makeText(this, "getButton clicked", Toast.LENGTH_SHORT).show();
                 break;
                //inUsername.setText(sharedPrefModule.provideSharedPreferences());
             case R.id.btnSave:
